@@ -68,14 +68,22 @@ export default function HomePage() {
           {filteredProducts.length === 0 ? (
             <p className="text-gray-500">No products found.</p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} {...product} />
-              ))}
-              <div className="sm:col-span-2 lg:col-span-1">
-                <FeaturedProductCard />
-              </div>
-            </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {filteredProducts.map((product) => (
+    <ProductCard
+      key={product.id}
+      id={product.id}
+      title={product.title}
+      price={product.price}
+      image={product.image}
+    />
+  ))}
+
+  <div className="sm:col-span-2 lg:col-span-1">
+    <FeaturedProductCard />
+  </div>
+</div>
+
           )}
         </div>
       </main>
