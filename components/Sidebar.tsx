@@ -22,7 +22,7 @@ export default function Sidebar({
           <h3 className="font-medium mb-2">Category</h3>
           <div className="flex flex-col gap-1 text-sm">
             {["All", "Electronics", "Clothing", "Home"].map((cat, index) => (
-              <label key={cat} className="block text-sm">
+              <label key={cat} className="inline-flex item-center gap-2 text-sm">
                 <input
                   type="radio"
                   name="category"
