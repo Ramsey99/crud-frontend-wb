@@ -1,6 +1,18 @@
 "use client";
 
-export default function Sidebar() {
+type Props = {
+  selectedCategory: string;
+  onCategoryChange: (value: string) => void;
+  maxPrice: number;
+  onPriceChange: (value: number) => void;
+};
+
+export default function Sidebar({
+  selectedCategory,
+  onCategoryChange,
+  maxPrice,
+  onPriceChange,
+}: Props) {
   return (
     <aside className="w-full sm:w-64 flex flex-col gap-4">
       <div className="bg-blue-800 text-white p-4 rounded-lg shadow-sm">
@@ -10,11 +22,12 @@ export default function Sidebar() {
           <h3 className="font-medium mb-2">Category</h3>
           <div className="flex flex-col gap-1 text-sm">
             {["All", "Electronics", "Clothing", "Home"].map((cat, index) => (
-              <label key={index} className="inline-flex items-center gap-2">
+              <label key={cat} className="block text-sm">
                 <input
                   type="radio"
                   name="category"
                   defaultChecked={cat === "All"}
+                  onChange={() => onCategoryChange(cat)}
                   className="appearance-none w-4 h-4 rounded-full border-2 border-white checked:border-4 checked:border-white transition-all"
                 />
                 {cat}
@@ -29,7 +42,8 @@ export default function Sidebar() {
             type="range"
             min="0"
             max="1000"
-            // value={0}
+            value={maxPrice}
+            onChange={(e) => onPriceChange(Number(e.target.value))}
             className="w-full start"
           />
           <div className="flex justify-between text-sm mt-2">
