@@ -79,7 +79,7 @@ export default function HomePage() {
                 />
               ))}
 
-              <div className="sm:col-span-2 lg:col-span-1">
+              <div className="sm:col-span-2 lg:col-span-2">
                 <FeaturedProductCard />
               </div>
             </div>
