@@ -6,7 +6,7 @@ This is a responsive e-commerce product listing app built using **Next.js App Ro
 
 🔗 [Deployed on Vercel](https://crud-frontend-wb-bdxc.vercel.app/)
 
-## 🎥 Submission Video
+ 🔗 🎥 [Submission Video](https://drive.google.com/file/d/1FeTrEy_WMt2veAiuKISml5Bsz_GedI4a/view?usp=sharing)
 
 ## 🔧 Tech Stack
 
