@@ -1,16 +1,20 @@
-type Props = {
+type Product = {
   title: string;
   price: number;
   image: string;
 };
 
-export default function ProductCard({ title, price, image }: Props) {
+export default function ProductCard({ title, price, image }: Product) {
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
-      <img src={image} alt={title} className="w-full h-40 object-cover rounded" />
-      <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-      <p className="text-blue-600 font-bold">₹{price}</p>
-      <button className="mt-2 px-4 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
+    <div className="bg-white rounded-lg shadow-sm p-4 text-center">
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-40 object-contain mx-auto mb-4"
+      />
+      <h2 className="font-semibold text-xl">{title}</h2>
+      <p className="text-black font-medium text-xl mb-2">${price}</p>
+      <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 text-sm">
         Add to Cart
       </button>
     </div>

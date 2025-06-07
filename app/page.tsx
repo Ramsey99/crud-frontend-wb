@@ -1,26 +1,38 @@
-'use client';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import ProductCard from '@/components/ProductCard';
-import Footer from '@/components/Footer';
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
+import ProductCard from "@/components/ProductCard";
+import Footer from "@/components/Footer";
+import FeaturedProductCard from "@/components/FeaturedProductCard";
 
 const products = [
-  { title: 'Wireless Headphones', price: 499, image: '/img1.jpg' },
-  { title: 'Smart Watch', price: 999, image: '/img2.jpg' },
-  { title: 'Book: React Basics', price: 299, image: '/img3.jpg' },
+  { title: "Running Shoes", price: 99, image: "/shoe.jpg" },
+  { title: "Wireless Headphones", price: 129, image: "/headphone.png" },
+  { title: "Backpack", price: 129, image: "/backpack.jpg" },
+  { title: "Smartwatch", price: 249, image: "/watch.jpg" },
+  { title: "Sunglasses", price: 149, image: "/sunglass.jpg" },
+  { title: "Digital Camera", price: 499, image: "/camera.jpg" },
+  { title: "T-shirt", price: 29, image: "/tshirt.png" },
 ];
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       <Header />
-      <main className="flex flex-col sm:flex-row p-4 gap-4">
+      <main className="flex flex-col md:flex-row p-6 gap-6 bg-[#f7faff]">
         <Sidebar />
-        <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {products.map((p, idx) => (
-            <ProductCard key={idx} {...p} />
-          ))}
-        </section>
+        <div className="flex-1">
+          <h2 className="text-2xl font-semibold mb-4 text-blue-900">
+            Product Listing
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((product, idx) => (
+              <ProductCard key={idx} {...product} />
+            ))}
+            <div className="sm:col-span-2 lg:col-span-2">
+              <FeaturedProductCard />
+            </div>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

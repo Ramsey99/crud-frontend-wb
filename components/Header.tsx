@@ -1,26 +1,25 @@
-'use client';
-import { ShoppingCart, User, Search } from 'lucide-react';
+import { Search, User, ShoppingCart } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4 shadow-md bg-white">
-      <div className="text-xl font-bold">WhatBytes</div>
-      <div className="flex-1 max-w-md mx-4">
-        <div className="flex items-center border rounded px-3 py-1">
-          <Search className="h-4 w-4 text-gray-500" />
+    <header className="bg-blue-800 text-white p-4 flex items-center justify-between">
+      <div className="text-4xl font-bold">Logo</div>
+      <div className="flex-1 max-w-lg mx-4">
+        <div className="flex items-center border rounded px-4 py-2">
+          <Search className="text-white w-5 h-5" />
           <input
             type="text"
-            placeholder="Search products..."
-            className="ml-2 w-full outline-none"
+            placeholder="Search for products..."
+            className="ml-2 flex-1 text-white bg-transparent placeholder:text-white focus:outline-none"
           />
         </div>
       </div>
-      <div className="flex items-center gap-4">
-        <div className="relative">
-          <ShoppingCart className="w-6 h-6" />
-          <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white w-4 h-4 rounded-full flex items-center justify-center">2</span>
-        </div>
-        <User className="w-6 h-6" />
+      <div className='flex items-center gap-4'>
+      <div className="flex items-center gap-4 border-0 rounded px-5 py-2 bg-blue-900 hover:bg-blue-700 transition-colors">
+        <ShoppingCart className="w-6 h-6 text-white-600" />
+        <span>Cart</span>
+      </div>
+      <User className="w-6 h-6" />
       </div>
     </header>
   );
