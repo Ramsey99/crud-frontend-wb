@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ WhatBytes Frontend Internship Assignment
 
-## Getting Started
+This is a responsive e-commerce product listing app built using **Next.js App Router** and **Tailwind CSS** for the WhatBytes internship assignment.
 
-First, run the development server:
+## 🌐 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 [Deployed on Vercel](https://crud-frontend-wb-bdxc.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎥 Submission Video
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 14 (App Router)**
+- **Tailwind CSS**
+- **React Context API** (for Cart)
+- **Lucide React** (icons)
 
-## Learn More
+## ✅ Features
 
-To learn more about Next.js, take a look at the following resources:
+- ✅ Fully responsive product listing grid
+- ✅ Product Detail Page (`/product/[id]`)
+- ✅ Add to Cart with quantity selection
+- ✅ Cart Page (`/cart`) with:
+  - List of added products
+  - Quantity update
+  - Remove item
+  - Price summary
+- ✅ Category + price filtering
+- ✅ Search bar with real-time filtering
+- ✅ URL-based filters (e.g., `?category=Electronics&price=500`)
+- ✅ Persistent cart with `localStorage`
+- ✅ Clean code, mobile-first design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Folder Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
